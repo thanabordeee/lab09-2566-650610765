@@ -41,6 +41,8 @@ export const Task = ({
 };
 export const TaskSummary = (props) => {
   return (
-    <p className="text-center text-secondary fst-italic">All ({props.all}) Done ({props.done})</p>
+    <p className="text-center text-secondary fst-italic">
+      All ({props.all}) Done ({props.done})
+      </p>
   );
 };
