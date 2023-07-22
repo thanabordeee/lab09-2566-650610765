@@ -31,7 +31,7 @@ export const Task = ({
         But if task is not completed : 
         <span>{title}</span>
       */}
-      <span className="resultclassname">{title}</span>
+      <span className={resultClassname}>{title}</span>
       <button className="btn btn-success" onClick={successButtnOnClick}>
         Done
         </button>
