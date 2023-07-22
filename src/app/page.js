@@ -7,6 +7,7 @@ import { TaskInput } from "@/components/TaskInput";
 import { nanoid } from "nanoid";
 import { useState } from "react";
 import { TaskSummary } from "@/components/Task";
+
 export default function Home() {
   //tasks = array of {id: string, title: string, completed: boolean}
   const [tasks, setTasks] = useState([]);
@@ -22,9 +23,9 @@ export default function Home() {
   };
 
   const deleteTask = (taskId) => {
-    const newTasks = tasks.filter((task) => task.id !== taskId);
+    const Tasks = tasks.filter((task) => task.id !== taskId);
     if(task.completed) setDone(done-1);
-    const newTask = tasks.filter((task) => task.id !== taskId);
+    const newTasks = tasks.filter((task) => task.id !== taskId);
     setTasks(newTasks);
     setAll(all-1);
   };
