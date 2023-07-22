@@ -40,7 +40,7 @@ export const Task = ({
   );
 };
 export const TaskSummary = (props) => {
-  retrun (
+  return (
     <p className="text-center text-secondary fst-italic">All ({props.all}) Done ({props.done})</p>
   );
 };
