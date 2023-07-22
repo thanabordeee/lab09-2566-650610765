@@ -1,3 +1,6 @@
+"use client";
+import { useState } from "react";
+
 export const Task = ({
   id,
   title,
@@ -5,6 +8,17 @@ export const Task = ({
   toggleDoneTaskFunc,
   completed,
 }) => {
+  const [IsSuccess, setIsSuccess] = useState(true);
+  const resultclassname  = IsSuccess ? "" : "text-decoration-line-through";
+  const successButtnOnClick = () =>{
+    if (IsSuccess) {
+      toggleDoneTaskFunc(id);
+      setIsSuccess(false);
+    }else{
+      toggleDoneTaskFunc(id);
+      setIsSuccess(true);
+    }
+  };
   const deleteBtnOnClick = () => {
     deleteTaskFunc(id);
   };
@@ -17,11 +31,16 @@ export const Task = ({
         But if task is not completed : 
         <span>{title}</span>
       */}
-      <span>{title}</span>
-      <button className="btn btn-success">Done</button>
+      <span className="resultclassname">{title}</span>
+      <button className="btn btn-success" onClick={successButtnOnClick}>Done</button>
       <button className="btn btn-danger" onClick={deleteBtnOnClick}>
         Delete
       </button>
     </div>
+  );
+};
+export const TaskSummary = (props) => {
+  retrun (
+    <p className="text-center text-secondary fst-italic">All ({props.all}) Done ({props.done})</p>
   );
 };
