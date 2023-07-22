@@ -14,7 +14,6 @@ export default function Home() {
   const [done, setDone] = useState(0);
   const [all, setAll] = useState(0);
 
-
   const addTask = (newTaskTitle) => {
     const newTask = { id: nanoid(), title: newTaskTitle, completed: false };
     const newTasks = [...tasks, newTask];
@@ -23,7 +22,7 @@ export default function Home() {
   };
 
   const deleteTask = (taskId) => {
-    const Tasks = tasks.filter((task) => task.id !== taskId);
+    const Tasks = tasks.filter((task) => task.id === taskId);
     if(task.completed) setDone(done-1);
     const newTasks = tasks.filter((task) => task.id !== taskId);
     setTasks(newTasks);
