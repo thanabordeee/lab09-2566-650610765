@@ -36,7 +36,7 @@ export default function Home() {
     //search for a task based on condition
     const task = newTasks.find((x) => x.id === taskId);
     task.completed = !task.completed;
-    const countDone = task.completed ? done +1 : done -1;
+    const countDone = task.completed ? done + 1 : done - 1;
     setDone(countDone);
     setTasks(newTasks);
   };

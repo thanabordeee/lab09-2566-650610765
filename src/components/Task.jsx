@@ -9,7 +9,7 @@ export const Task = ({
   completed,
 }) => {
   const [IsSuccess, setIsSuccess] = useState(true);
-  const resultclassname  = IsSuccess ? "" : "text-decoration-line-through";
+  const resultClassname  = IsSuccess ? "" : "text-decoration-line-through";
   const successButtnOnClick = () =>{
     if (IsSuccess) {
       toggleDoneTaskFunc(id);
@@ -32,7 +32,9 @@ export const Task = ({
         <span>{title}</span>
       */}
       <span className="resultclassname">{title}</span>
-      <button className="btn btn-success" onClick={successButtnOnClick}>Done</button>
+      <button className="btn btn-success" onClick={successButtnOnClick}>
+        Done
+        </button>
       <button className="btn btn-danger" onClick={deleteBtnOnClick}>
         Delete
       </button>
