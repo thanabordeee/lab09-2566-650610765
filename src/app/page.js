@@ -6,7 +6,7 @@ import { Task } from "@/components/Task";
 import { TaskInput } from "@/components/TaskInput";
 import { nanoid } from "nanoid";
 import { useState } from "react";
-
+import { TaskSummary } from "@/components/Task";
 export default function Home() {
   //tasks = array of {id: string, title: string, completed: boolean}
   const [tasks, setTasks] = useState([]);
